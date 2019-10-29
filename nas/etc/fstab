@@ -1,0 +1,4 @@
+UUID=e3e03ffd-2e5a-45f1-98ab-53acc49a64ca / ext4 defaults 0 0
+UUID=5311-A0A5 /boot/efi vfat defaults 0 0
+/swap.img	none	swap	sw	0	0
+UUID=8c14f889-c3e5-4a2c-9f60-6efbb9102747 /media/shared ext4 defaults,auto_da_alloc 0 2

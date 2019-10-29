@@ -29,7 +29,7 @@ def save_machine_config(args):
         elif os.path.isfile(name):
             file_path = f'{destination}/{name}'
             path, file = file_path.rsplit('/', maxsplit=1)
-            os.makedirs(path)
+            os.makedirs(path, exist_ok=True)
 
             copyfile(name, file_path)
 
