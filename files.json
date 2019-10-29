@@ -7,5 +7,11 @@
   },
   {
     "name": "/etc/samba/usermap.txt"
+  },
+  {
+    "name": "/etc/zfs/zpool.cache"
+  },
+  {
+    "name": "/etc/exports"
   }
 ]
