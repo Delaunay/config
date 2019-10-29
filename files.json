@@ -1,5 +1,11 @@
 [
   {
     "name": "/etc/fstab"
+  },
+  {
+    "name": "/etc/samba/smb.conf"
+  },
+  {
+    "name": "/etc/samba/usermap.txt"
   }
 ]
