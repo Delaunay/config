@@ -1,0 +1,19 @@
+# /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a
+# device; this may be used with UUID= as a more robust way to name devices
+# that works even if disks are added and removed. See fstab(5).
+#
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+# / was on /dev/sde6 during installation
+UUID=dd774432-63e7-4e6d-b156-7df44ca94ad4 /               ext4    errors=remount-ro 0       1
+# /boot/efi was on /dev/sdc1 during installation
+UUID=44A7-13C0  /boot/efi       vfat    umask=0077      0       1
+# swap was on /dev/sde5 during installation
+UUID=672ad4ee-2a9a-4d0b-b124-63c16e6fe7d0 none            swap    sw              0       0
+
+UUID=efc1b94d-2cfc-4d51-a339-458ed23dea8d /fast ext4 defaults 0 0
+
+192.168.0.106:/media/shared /home/setepenre/share nfs4 rw,relatime,vers=4.1,rsize=1048576,wsize=1048576,namlen=255,soft,proto=tcp,timeo=600,retrans=2,local_lock=none 0 0
+192.168.0.106:/mnt/zshare /home/setepenre/zshare nfs4 rw,relatime,vers=4.1,rsize=1048576,wsize=1048576,namlen=255,soft,proto=tcp,timeo=600,retrans=2,local_lock=none 0 0
+
