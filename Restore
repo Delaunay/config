@@ -1,0 +1,35 @@
+
+Restore ZFS pool
+
+> sudo apt install zfsutils-linux
+> sudo zfs import
+> sudo zpool import -f zshare
+> ls /mnt/zshare/
+
+Maintenance
+
+> sudo zpool scrub zshare
+> sudo zpool scrub -s zshare < stop scrubbing
+
+Restore NFS
+> sudo apt install nfs-kernel-server
+> vi /etc/exports
+ + /mnt/zshare 192.168.0.*(rw,sync,no_subtree_check,no_root_squash)
+ 
+Restore Samba
+> sudo apt-get install samba 
+> cp samba config
+# Add user to samba
+> sudo smbpasswd -a setepenre
+
+
+Install Plex
+> wget https://downloads.plex.tv/plex-media-server-new/1.29.2.6364-6d72b0cf6/debian/plexmediaserver_1.29.2.6364-6d72b0cf6_amd64.deb
+> sudo dpkg -i plexmediaserver_1.29.2.6364-6d72b0cf6_amd64.deb
+> http://192.168.0.157:32400/web
+
+
+Update Windows Mapped Drive
+
+> \\192.168.0.157\zshare
+> [X] Connect using different credential
